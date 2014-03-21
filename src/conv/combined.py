@@ -25,7 +25,7 @@ class Combined(object):
         match = pattern.match(line)
 
         if match:
-            csv = "\"{arg1}\",\"{arg2}\",\"{arg3}\",\"{arg4}\",\"{arg5}\",\"{arg6}\",\"{arg7}\",\"{arg8}\",\"{arg9}\",\"{arg10}\",\"{arg11}\"\n"
+            csv = "\"{arg1}\",\"{arg2}\",\"{arg3}\",\"{arg4}\",\"{arg5}\",\"{arg6}\",\"{arg7}\",\"{arg8}\",\"{arg9}\",\"{arg10}\",\"{arg11}\""
             return csv.format(
                 arg1 = match.group(1),
                 arg2 = match.group(2),
