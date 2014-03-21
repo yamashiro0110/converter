@@ -37,3 +37,7 @@ nosetests.xml
 
 # Log Files
 logs/*
+
+# Build MarkDown
+*.html
+
