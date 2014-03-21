@@ -33,9 +33,7 @@ class ConverterFactory(object):
         print "call getConverter. logFormat is {logFormat}".format(logFormat = self.logFormat)
 
         if self.logFormat == "combined":
-            print "combined"
             return Combined()
 
         else:
-            print "Dummy"
             return Dummy()

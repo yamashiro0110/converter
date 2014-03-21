@@ -19,6 +19,8 @@ def exportPath():
     for line in sys.path:
         print line
 
+    print ""
+
 if __name__ == '__main__':
     """
     sys.argv[1] = Input Log File Path
@@ -33,16 +35,16 @@ if __name__ == '__main__':
     logFormat = sys.argv[2]
     outPath = sys.argv[3]
 
-    print "Convert Test Start"
-    print "inputLog:{inputLog}".format(inputLog = inputLog)
-    print "logFormat:{logFormat}".format(logFormat = logFormat)
+    print "Convert Start"
+#     print "inputLog:{inputLog}".format(inputLog = inputLog)
+#     print "logFormat:{logFormat}".format(logFormat = logFormat)
 
     factory = ConverterFactory(logFormat)
     conv = factory.createConv()
-    print "conv.name = {name}".format(name = conv.name)
+#     print "conv.name = {name}".format(name = conv.name)
 
     outLog = open(outPath, "a")
     for line in open(inputLog, "r"):
-        outLog.write("{text}\n".format(text = conv.getConvertText(line)))
+        outLog.write("{text}\n".format(text = conv.getConvertText(line)),)
 
     outLog.close()
